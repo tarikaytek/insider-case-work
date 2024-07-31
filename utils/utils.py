@@ -5,8 +5,10 @@ import os
 from dotenv import load_dotenv
 import logging
 
-load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '../.env'))
+logging.basicConfig(level=logging.INFO)
 
+# Load environment variables and assign each to a variable
+load_dotenv()
 MODEL_PATH = os.getenv('MODEL_PATH')
 MODEL_UTILS_PATH = os.getenv('MODEL_UTILS_PATH')
 NUM_RECOMMENDATIONS=os.getenv('NUM_RECOMMENDATIONS')

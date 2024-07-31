@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 
 # Get default number for recommendations from .env file. If not set, default to 10
-load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '../.env'))
+load_dotenv()
 NUM_RECOMMENDATIONS = int(os.getenv('NUM_RECOMMENDATIONS', 10))
 
 app = Flask(__name__)
